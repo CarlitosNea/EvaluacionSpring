@@ -10,6 +10,9 @@ public class servicioEstudiante {
     public servicioEstudiante(){
         lista.add(new Estudiante("1001","Carlos","Rodriguez","Decimo", 4.5));
         lista.add(new Estudiante("1010","Gabriela","Lopez","Decimo", 2.8));
+        lista.add(new Estudiante("1110","Esteban","Acosta","Decimo", 3));
+        lista.add(new Estudiante("1100","Camila","Estrada","Once", 4.3));
+        lista.add(new Estudiante("1000","Richard","Hernandez","Once", 2.9));
     }
 
     public ArrayList<Estudiante> mostrar(){
@@ -63,9 +66,11 @@ public class servicioEstudiante {
         int reprobados = 0;
         for (Estudiante e : listaAR){
             if (e.getNota_final()>=3){
+                e.setObservacion("Aprobado");
                 aprobados+=1;
             }
             else {
+                e.setObservacion("Reprobado");
                 reprobados+=1;
             }
         }
