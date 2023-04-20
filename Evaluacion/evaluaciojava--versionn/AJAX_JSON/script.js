@@ -29,13 +29,13 @@ $(document).ready(function(){
     })
 
 
-
     $('#enviar').on('click', function(){
         let datos = {
-            nombres: $('#nombre_input').val(),
-            apellidos: $('#apellido_input').val(),
-            telefono: $('#telefono_input').val(),
-            estado_civil: $('#civil_input').val(),
+            documento: $('#doc_input').val(),
+            nombre: $('#nombre_input').val(),
+            apellido: $('#apellido_input').val(),
+            curso: $('#curso_input').val(),
+            nota_final: $('#nota_input').val(),
         }
         let datosEnvio = JSON.stringify(datos)
         console.log(datos)
@@ -52,65 +52,4 @@ $(document).ready(function(){
         })
     })
 
-    $('#buscar').on('click', function(){
-        let dato = $('#nombre_buscar').val();
-        $.ajax({
-            url: "http://localhost:8080/buscarNombre/"+dato,
-            type: "GET",
-            datatype: JSON,
-            success: function(respuesta){
-                if(respuesta)
-                    console.log(respuesta)
-                else
-                console.log("no hay na")
-            }
-        })
-    })
-
-    $('#buscar_id').on('click', function(){
-        let dato = $('#id_buscar').val();
-        $.ajax({
-            url: "http://localhost:8080/buscarId/"+dato,
-            type: "GET",
-            datatype: JSON,
-            success: function(respuesta){
-                if(respuesta)
-                    console.log(respuesta)
-                else
-                console.log("no hay na")
-            }
-        })
-    })
-
-
-    $('#eliminar').on('click', function(){
-    let dato = $('#id_eliminar').val();
-    $.ajax({
-        url: "http://localhost:8080/eliminar/"+dato,
-        type: "DELETE",
-        dataType: "JSON",
-        success: function(respuesta){
-            if(respuesta)
-                console.log("eliminado exitosamente")
-            else
-                console.log("no hay na")
-        }})
-    })
-
-
-    $('#actualizar').on('click', function(){
-        let id = $('#id_act').val()
-        let nombre_act = $('#nombre_act').val()
-        let apellido_act = $('#apellido_act').val()
-        let telefono_act= $('#telefono_act').val()
-        let civil_act = $('#civil_act').val()
-        $.ajax({
-            url: "http://localhost:8080/actualizar/"+id+"/"+nombre_act+"/"+apellido_act+"/"+telefono_act+"/"+civil_act,
-            type: "PUT",
-            dataType: "JSON",
-            success: function(respuesta){
-                alert(respuesta)
-            }
-        })
-    })
 })

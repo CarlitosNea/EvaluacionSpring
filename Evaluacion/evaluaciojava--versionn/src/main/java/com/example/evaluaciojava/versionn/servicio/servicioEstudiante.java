@@ -43,19 +43,10 @@ public class servicioEstudiante {
         return lista_curso;
     }
 
-    public String agregar(String documento, String nombre, String apellido, String curso, double nota_final){
-        Estudiante dato=buscarDoc(documento);
+    public String agregar(Estudiante novo_estu){
         String msg;
-        lista.add(new Estudiante(documento,nombre,apellido,curso,nota_final));
+        lista.add(novo_estu);
         msg="Registro exitoso";
-
-//        if (dato.getDocumento().equals(documento)){
-//            msg="El documento ya existe";
-//        }
-//        else {
-//            lista.add(new Estudiante(documento,nombre,apellido,curso,nota_final));
-//            msg="Registro exitoso";
-//        }
         return msg;
 
     }
@@ -77,18 +68,7 @@ public class servicioEstudiante {
         return "aprobados: "+aprobados+", reprobados:"+reprobados;
     }
 
-//    public String agregar(Estudiante novo_estu){
-//        String msg;
-//        if (buscarDoc(novo_estu.getDocumento())!=null){
-//            lista.add(novo_estu);
-//            msg="Registro exitoso";
-//        }
-//        else {
-//            msg="El documento ya existe";
-//        }
-//        return msg;
-//
-//    }
+
 
 
 
