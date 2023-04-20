@@ -11,49 +11,58 @@
     <title>Document</title>
 </head>
 <body>
-    <table id="tabla"></table>
-    <button type="submit" class="btn btn-primary" id="listar">Listar</button>
+
+    <section id="sect1">
+        <fieldset>
+            <legend>Nuevo Estudiante</legend>
+            <form id="form_estu_novo" action="">
+                <div>
+                    <label for="">Documento</label>
+                    <input type="text" id="doc_input">
+                </div>
+                <div>
+                    <label for="">Nombre</label>
+                    <input type="text" id="nombre_input">
+                </div>
+                <div>
+                    <label for="">Apellido</label>
+                    <input type="text" id="apellido_input">
+                </div>
+                <div>
+                    <label for="">Curso</label>
+                    <input type="text" id="curso_input">
+                </div>
+                <div>
+                    <label for="">Nota final</label>
+                    <input type="text" id="nota_input">
+                </div>
+                <button type="submit" id="enviar">Enviar</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Estado del curso</legend>
+            <form id="form_estado_curso">
+                <div>
+                    <label for="">Curso</label>
+                    <input type="text" id="curso_estado">
+                </div>
+                <button type="button" id="consultar">Consultar</button>
+            </form>
+            
+        </fieldset>
+    </section>
 
 
-    <fieldset>
-        <legend>Nueva Estudiante</legend>
-        <form id="form_estu_novo" action="">
-            <div>
-                <label for="">Documento</label>
-                <input type="text" id="doc_input">
-            </div>
-            <div>
-                <label for="">Nombre</label>
-                <input type="text" id="nombre_input">
-            </div>
-            <div>
-                <label for="">Apellido</label>
-                <input type="text" id="apellido_input">
-            </div>
-            <div>
-                <label for="">Curso</label>
-                <input type="text" id="curso_input">
-            </div>
-            <div>
-                <label for="">Nota final</label>
-                <input type="text" id="nota_input">
-            </div>
-            <button type="submit" id="enviar">Enviar</button>
-        </form>
-    </fieldset>
+    <section id="sect2">
+        <button type="submit" class="btn btn-primary" id="listar">Listar</button>
+        <table id="tabla"></table>
+    </section>
+
+    
 
 
-    <fieldset>
-        <legend>Estado del curso</legend>
-        <form id="form_estado_curso">
-            <div>
-                <label for="">Curso</label>
-                <input type="text" id="curso_estado">
-            </div>
-        </form>
-        <button type="button" id="consultar">Consultar</button>
-    </fieldset>
-
+    
 
 </body>
 </html>
