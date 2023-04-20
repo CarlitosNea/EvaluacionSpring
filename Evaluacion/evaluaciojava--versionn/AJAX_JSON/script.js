@@ -52,4 +52,20 @@ $(document).ready(function(){
         })
     })
 
+
+    $('#consultar').on('click', function(){
+        let dato = $('#curso_estado').val();
+        $.ajax({
+            url: "http://localhost:8080/estadoCurso/"+dato,
+            type: "GET",
+            datatype: JSON,
+            success: function(respuesta){
+                if(respuesta)
+                    alert(respuesta)
+                else
+                console.log("error")
+            }
+        })
+    })
+
 })
